@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: searched
+source: https://bryter.com/security-and-privacy/
+description: >-
+  Cross-cutting standards and compliance posture BRYTER conforms to, from its public
+  security-and-privacy page and developer documentation. BRYTER states it is fully GDPR
+  compliant, stores EU customer data in Frankfurt, Germany, encrypts data at rest and in
+  transit, supports Bring-Your-Own-Keys (BYOK) for Private Cloud deployments, and
+  undergoes annual third-party audits and regular independent security assessments. SOC 2,
+  ISO 27001/27018, HIPAA, and PCI DSS are not named on the public page.
+standards:
+- id: gdpr
+  conforms: true
+  evidence: '"BRYTER is fully GDPR compliant" — bryter.com/security-and-privacy/'
+- id: encryption-at-rest-and-in-transit
+  conforms: true
+  evidence: Security page states data is encrypted at rest and in transit.
+- id: byok
+  conforms: true
+  evidence: Bring Your Own Keys (BYOK) supported for Private Cloud deployments.
+- id: third-party-audit
+  conforms: true
+  evidence: Annual third-party audits and regular independent security assessments.
+- id: soc2
+  conforms: false
+  evidence: Not named on the public security-and-privacy page.
+- id: iso-27001
+  conforms: false
+  evidence: Not named on the public security-and-privacy page.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No OpenAPI published; error envelope not documented publicly.
+- id: oauth2
+  conforms: false
+  evidence: APIs use bearer API-key auth, not OAuth2.
+compliance_program:
+  published: true
+  url: https://bryter.com/security-and-privacy/
+  certifications:
+  - GDPR
+  data_residency: EU customer data hosted in Frankfurt, Germany

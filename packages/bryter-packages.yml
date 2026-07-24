@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.bryter.io/custom-actions-getting-started
+description: >-
+  First-party BRYTER client library discovered on the public package registries. The
+  @bryter_io npm scope is BRYTER's official organization scope (developer.bryter.io
+  homepage, Apache-2.0). No PyPI, Maven Central, NuGet, RubyGems, Packagist, or crates.io
+  first-party client library was found; the REST APIs (Execution, Database, Audit Log)
+  are consumed directly over HTTP with a bearer API key. Registry HTTP status confirmed
+  via https://registry.npmjs.org at fetch time.
+packages:
+- language: javascript
+  registry: npm
+  name: "@bryter_io/custom-actions"
+  url: https://www.npmjs.com/package/@bryter_io/custom-actions
+  homepage: https://developer.bryter.io/
+  install: npm install @bryter_io/custom-actions
+  version: 3.2.0
+  license: Apache-2.0
+  official: true
+  description: >-
+    Official library for building Custom Actions (custom nodes) in the BRYTER platform.

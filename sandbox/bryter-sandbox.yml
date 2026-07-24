@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.bryter.io/api-get-started
+description: >-
+  BRYTER separates test and production usage through per-environment API keys rather than
+  through test cards or magic identifiers (it is not a payments provider). Each API key is
+  scoped to a single environment, and TEST is a distinct environment from LIVE, so a TEST
+  key exercises the APIs against test-environment data without touching production.
+test_live_separation:
+  mechanism: per-environment API keys
+  environments:
+  - name: TEST
+    purpose: Test environment; keys scoped here do not access LIVE data.
+  - name: LIVE
+    purpose: Production environment.
+  - name: client
+    purpose: Per-client environments; keys can be scoped to a specific client environment.
+  key_scope: >-
+    A key grants full read/write/execute access only within the environment it is scoped
+    to. Generate a TEST key from the Admin Console to run against the test environment.
+test_values:
+  published: false
+  notes: >-
+    BRYTER does not publish magic test values (no test cards / test identifiers) — it is a
+    workflow automation platform, not a payments API. Test data lives in the TEST
+    environment created by the tenant.

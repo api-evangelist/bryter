@@ -1,0 +1,42 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.bryter.io/api-get-started
+description: >-
+  Cross-cutting request/response conventions for the BRYTER REST APIs, captured from the
+  public developer documentation (no OpenAPI is published). Covers authentication style,
+  environment separation, and rate-limit signaling. Cross-links authentication/,
+  rate-limits/, lifecycle/, and sandbox/.
+conventions:
+  authentication:
+    style: bearer-api-key
+    header: 'Authorization: Bearer <Api Key>'
+    scope: per-environment (TEST, LIVE, or client)
+    ref: authentication/bryter-authentication.yml
+  environments:
+    modes:
+    - TEST
+    - LIVE
+    - client
+    notes: >-
+      API keys are scoped to a single environment; separate keys are issued for TEST and
+      LIVE (and per client environment). Requests target a tenant-specific host such as
+      app.bryter.io or brandname.us.bryter.io.
+    ref: sandbox/bryter-sandbox.yml
+  rate_limiting:
+    scope: client-ip
+    per_api: true
+    limits:
+      concurrent_connections: 100
+      requests_per_second: 200
+      requests_per_minute: 4000
+    ref: rate-limits/bryter-rate-limits.yml
+  idempotency:
+    supported: false
+    notes: No idempotency-key mechanism is documented in the public BRYTER API docs.
+  pagination:
+    documented: false
+    notes: Pagination conventions are not described on the public developer portal.
+  versioning:
+    documented: false
+    notes: No public API versioning or deprecation policy is published.
+    ref: lifecycle/bryter-lifecycle.yml

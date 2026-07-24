@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.bryter.io/api-get-started
+description: >-
+  API lifecycle facts for the BRYTER REST APIs, captured from the public developer
+  documentation. BRYTER does not publish a formal API versioning scheme, deprecation
+  policy, SLA page, or a public status page. The most concrete lifecycle contract is
+  API-key rotation: keys expire after one year and should be rotated before expiration.
+key_lifecycle:
+  expiry: 1 year
+  rotation: Rotate keys before expiration; multiple keys can be generated per environment.
+  managed_via: Admin Console (API Keys tab) by a Tenant administrator
+versioning:
+  documented: false
+deprecation:
+  policy_url: null
+  sunset_header: false
+  documented: false
+sla:
+  url: null
+status_page: null
+notes: >-
+  No public status page (status.bryter.io / status.bryter.com not found), no published
+  deprecation policy, and no OpenAPI to derive deprecated operations from.

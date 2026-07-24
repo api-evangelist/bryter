@@ -1,0 +1,39 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+provider: BRYTER
+providerId: bryter
+generated: '2026-07-18'
+method: searched
+source: https://developer.bryter.io/api-rate-limiting
+created: '2026-07-18'
+modified: '2026-07-18'
+tags:
+- Rate Limiting
+- Automation
+description: >-
+  BRYTER enforces rate limits per client IP address, applied separately to the Database
+  API and the Execution API. The published defaults may differ based on contract.
+sources:
+- https://developer.bryter.io/api-rate-limiting
+limits:
+- name: Simultaneous connections
+  scope: client-ip
+  api: Database API and Execution API
+  metric: concurrent_connections
+  limit: 100
+- name: Requests per second
+  scope: client-ip
+  api: Database API and Execution API
+  metric: requests_per_second
+  limit: 200
+  timeFrame: second
+- name: Requests per minute
+  scope: client-ip
+  api: Database API and Execution API
+  metric: requests_per_minute
+  limit: 4000
+  timeFrame: minute
+notes: >-
+  Limits apply separately to the Database API and the Execution API. Exact throttling
+  behavior and thresholds may vary by contract. Response status code and rate-limit
+  response headers are not documented on the public rate-limiting page.

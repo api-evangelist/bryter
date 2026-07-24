@@ -1,8 +1,17 @@
 aid: bryter
 name: Bryter
-description: 'Bryter is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: automation. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  BRYTER is a no-code service automation and AI productivity platform for legal and
+  professional-services teams, used by law firms and corporate legal, compliance, and
+  operations departments to build self-service applications, document automation, and
+  rule-based workflows without writing code. Beyond the visual builder, BRYTER exposes a
+  developer surface at developer.bryter.io: a REST Execution API for triggering modules
+  from external systems, a REST Database API for synchronizing data across platforms, a
+  REST Audit Log API for tracking tenant events, and Custom Actions for extending modules
+  with custom nodes (published as the @bryter_io/custom-actions npm library). APIs use
+  bearer API-key authentication scoped per environment (TEST, LIVE, or client), against a
+  tenant-specific host such as app.bryter.io. The company was surfaced as an Accel
+  portfolio company and enriched from its public developer and security documentation.
 url: https://raw.githubusercontent.com/api-evangelist/bryter/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +19,75 @@ x-backed-by:
 - accel
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://media.bryter.com/wp-content/uploads/2024/07/bryter-1200x627-1.png
 tags:
 - Company
 - Automation
-apis: []
+- No-Code
+- Legal Tech
+- Workflow Automation
+- Document Automation
+- Artificial Intelligence
+- Compliance
+apis:
+- name: BRYTER Execution API
+  description: >-
+    REST API for triggering and executing BRYTER modules from external systems, returning
+    module results. Authenticated with a bearer API key scoped to a tenant environment.
+  humanURL: https://developer.bryter.io/execution-api-reference
+  baseURL: https://app.bryter.io
+  tags:
+  - Execution
+  - Automation
+  - REST
+  properties:
+  - type: APIReference
+    url: https://developer.bryter.io/execution-api-reference
+  - type: GettingStarted
+    url: https://developer.bryter.io/api-get-started
+- name: BRYTER Database API
+  description: >-
+    REST API for reading and synchronizing BRYTER database data across platforms and
+    external systems. Authenticated with a bearer API key scoped to a tenant environment.
+  humanURL: https://developer.bryter.io/database-api-reference
+  baseURL: https://app.bryter.io
+  tags:
+  - Database
+  - Data Sync
+  - REST
+  properties:
+  - type: APIReference
+    url: https://developer.bryter.io/database-api-reference
+  - type: GettingStarted
+    url: https://developer.bryter.io/api-get-started
+- name: BRYTER Audit Log API
+  description: >-
+    REST API for retrieving tenant audit-log events for monitoring and compliance.
+    Authenticated with a bearer API key scoped to a tenant environment.
+  humanURL: https://developer.bryter.io/audit-log-api-reference
+  baseURL: https://app.bryter.io
+  tags:
+  - Audit Log
+  - Compliance
+  - REST
+  properties:
+  - type: APIReference
+    url: https://developer.bryter.io/audit-log-api-reference
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,4 +95,49 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://www.bryter.io
+  url: https://bryter.com
+- type: DeveloperPortal
+  url: https://developer.bryter.io/
+- type: Documentation
+  url: https://developer.bryter.io/api-get-started
+- type: APIReference
+  url: https://developer.bryter.io/execution-api-reference
+- type: GettingStarted
+  url: https://developer.bryter.io/api-get-started
+- type: Support
+  url: https://help.bryter.io
+- type: Blog
+  url: https://bryter.com/blog/
+- type: Pricing
+  url: https://bryter.com/pricing/
+- type: PrivacyPolicy
+  url: https://bryter.com/privacy-policy/
+- type: TermsOfService
+  url: https://bryter.com/legal-terms/end-user-licence-agreement/
+- type: Compliance
+  url: https://bryter.com/security-and-privacy/
+- type: Packages
+  url: packages/bryter-packages.yml
+- type: SDKs
+  url: packages/bryter-packages.yml
+- type: Authentication
+  url: authentication/bryter-authentication.yml
+- type: RateLimits
+  url: rate-limits/bryter-rate-limits.yml
+- type: Conventions
+  url: conventions/bryter-conventions.yml
+- type: Lifecycle
+  url: lifecycle/bryter-lifecycle.yml
+- type: Sandbox
+  url: sandbox/bryter-sandbox.yml
+- type: Conformance
+  url: conformance/bryter-conformance.yml
+- type: DomainSecurity
+  url: security/bryter-domain-security.yml
+- type: LLMsTxt
+  url: llms/bryter-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
