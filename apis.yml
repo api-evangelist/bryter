@@ -105,6 +105,10 @@ apis:
   humanURL: https://developer.bryter.io/audit-log-api-reference
   baseURL: https://app.bryter.io
   tags:
+  - Audit Logs
+  - Compliance
+  - REST
+  tags_raw:
   - Audit Log
   - Compliance
   - REST
