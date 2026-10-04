@@ -54,7 +54,7 @@ tags:
 - Automation
 - No-Code
 - Legal Tech
-- Workflow-Automation
+- Workflow Automation
 - Document Automation
 - Artificial Intelligence
 - Compliance
@@ -67,6 +67,7 @@ tags_raw:
 - Document Automation
 - Artificial Intelligence
 - Compliance
+- Workflow-Automation
 apis:
 - name: BRYTER Execution API
   description: >-
