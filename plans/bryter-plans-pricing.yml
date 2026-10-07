@@ -1,0 +1,26 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://bryter.com/pricing/
+sources:
+- https://bryter.com/pricing/
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: negotiated
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: false
+note: Pricing page lists two products with no numeric prices; only quote requests.
+plan_count: 2
+plans:
+- name: BRYTER Workflows
+  price_text: Get a quote
+  period: none
+- name: BEAMON AI
+  price_text: Get pricing
+  period: none
